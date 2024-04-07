@@ -8,6 +8,7 @@ export default function Operacion(props) {
   const [message, setMessage] = useState('');
   const [operacion, setOperacion] = useState('');
 
+  // Resetea los numeros cuando cambia la operacion (se pincha una en la navbar)
   useEffect(() => {
     resetearNumeros();
   }, [props.op]);
@@ -29,7 +30,7 @@ export default function Operacion(props) {
     } else if (props.op === '*') {
       setOperacion('Multiplica');
       const newNum2 = generateRandomNumber(1,10); 
-      const newNum1 = newNum2 * generateRandomNumber(1, 10); //De esta manera nos aseguramos que siempre sea una division sin resto
+      const newNum1 = newNum2 * generateRandomNumber(1, 10); 
       setNum1(newNum1);
       setNum2(newNum2);
       setCorrectAnswer(newNum1 * newNum2);
@@ -42,7 +43,7 @@ export default function Operacion(props) {
     setUserInput('');
   };
 
-  const handleCheckAnswer = () => {
+  const checkAnswer = () => {
     if (parseInt(userInput) === correctAnswer) {
       setMessage('😀¡Respuesta correcta!😀');
       resetearNumeros();
@@ -65,7 +66,7 @@ export default function Operacion(props) {
       <h2>{operacion} los siguientes números:</h2>
       <p>{num1} {props.op} {num2}</p>
       <input type="number" value={userInput} onChange={(e) => setUserInput(e.target.value)} />
-      <button className="btn" onClick={handleCheckAnswer}>Comprobar</button>
+      <button className="btn" onClick={checkAnswer}>Comprobar</button>
       <p>{message}</p>
     </div>
   );
