@@ -86,7 +86,7 @@ export default function Operacion(props) {
   return (
     <div>
       <h2>{operacion} los siguientes números:</h2>
-      <p>Dificultad: {dificultad}</p>
+      <p>Dificultad</p>
       <select
       className="select-estilizado"
       value={dificultad}

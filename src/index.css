@@ -175,3 +175,36 @@ body {
 .nav-links a:hover {
   color: #000080;
 }
+
+select {
+  font-size: 16px; /* Tamaño de la fuente */
+  padding: 8px 12px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo */
+  color: #333; /* Color del texto */
+}
+
+/* Estilo cuando el select está enfocado */
+select:focus {
+  outline: none; /* Eliminar el contorno predeterminado */
+  border-color: #007bff; /* Cambiar color del borde */
+}
+
+/* Estilo cuando el select está desplegado */
+select:active,
+select:hover {
+  border-color: #007bff; /* Cambiar color del borde */
+}
+
+/* Estilo para las opciones del select */
+select option {
+  font-size: 16px; /* Tamaño de la fuente */
+  padding: 8px 12px; /* Espaciado interno */
+}
+
+/* Estilo para las opciones del select cuando están enfocadas */
+select option:focus {
+  background-color: #007bff; /* Cambiar color de fondo */
+  color: #fff; /* Cambiar color del texto */
+}
